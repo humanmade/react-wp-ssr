@@ -15,10 +15,21 @@ For local development, we recommend the [v8js extension for Chassis](https://git
 
 ## Quick Start
 
-1. Add this repository to your project.
-2. Add `react-wp-ssr` to your node modules: `npm install --save react-wp-ssr`
-3. In PHP, call [`ReactWPSSR\render()`](docs/api-php.md) wherever you want to render your app.
-4. In JS, call `react-wp-ssr`'s [`render`](docs/api-js.md) function instead of calling `ReactDOM.render` function.
+You should already have a React-based WP project ready to adapt, using [react-wp-scripts](https://github.com/humanmade/react-wp-scripts/).
+
+
+### Step 1: Add backend library
+
+Add this repository to your project, either with git submodules or Composer. You'll then need to load it into your project:
+
+```php
+require_once __DIR__ . '/vendor/react-wp-ssr/namespace.php';
+```
+
+
+### Step 2: Add backend render call
+
+In PHP, call [`ReactWPSSR\render()`](docs/api-php.md) wherever you want to render your app. (Do not include the container yourself.)
 
 For themes, the best practice is to create a minimal `index.php`:
 
@@ -32,7 +43,19 @@ ReactWPSSR\render( get_stylesheet_directory() );
 get_footer();
 ```
 
-In your JavaScript file, replace your ReactDOM.render call with a call to `react-wp-ssr`'s render:
+
+### Step 3: Add frontend library
+
+Add `react-wp-ssr` to your node modules:
+
+```sh
+npm install --save react-wp-ssr
+```
+
+
+### Step 4: Replace frontend render call
+
+In your JavaScript file, replace your ReactDOM.render call with a call to `react-wp-ssr`'s [`render`](docs/api-js.md):
 
 ```js
 import React from 'react';
