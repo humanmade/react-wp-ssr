@@ -1,0 +1,109 @@
+/**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/* @flow */
+
+html, body {
+	overflow: hidden;
+}
+
+.error-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: none;
+	z-index: 1000;
+
+	--black: #293238;
+	--dark-gray: #878e91;
+	--red: #ce1126;
+	--red-transparent: rgba(206, 17, 38, 0.05);
+	--light-red: #fccfcf;
+	--yellow: #fbf5b4;
+	--yellow-transparent: rgba(251, 245, 180, 0.3);
+	--white: #ffffff;
+}
+
+.error-overlay .wrapper {
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	text-align: center;
+	background-color: var( --white );
+}
+
+.primaryErrorStyle {
+	background-color: var( --light-red );
+};
+
+.secondaryErrorStyle {
+	background-color: var( --yellow );
+}
+
+.error-overlay .wrapper {
+	/*display: flex;*/
+	/*flex-direction: column;*/
+}
+
+.error-overlay .overlay {
+	position: relative;
+	display: inline-flex;
+	flex-direction: column;
+	height: 100%;
+	width: 1024px;
+	max-width: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding: 0.5rem;
+	box-sizing: border-box;
+	text-align: left;
+	font-family: Consolas, Menlo, monospace;
+	font-size: 11px;
+	line-height: 1.5;
+	color: var( --black );
+}
+
+.header {
+	font-size: 2em;
+	font-family: sans-serif;
+	color: var( --red );
+	white-space: pre-wrap;
+	margin: 0 2rem 0.75rem 0;
+	flex: 0 0 auto;
+	max-height: 50%;
+	overflow: auto;
+}
+
+.preStyle {
+	display: block;
+	padding: 0.5em;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	border-radius: 0.25rem;
+	background-color: var( --red-transparent );
+	font-size: inherit;
+}
+
+.codeStyle {
+	font-family: Consolas, Menlo, monospace;
+	font-size: inherit;
+}
+
+.tab {
+	color: rgba( 255, 255, 255, 0.1 );
+}
+
+.footer {
+	font-family: sans-serif;
+	color: var( --dark-gray );
+	margin-top: 0.5rem;
+	flex: 0 0 auto;
+}

@@ -1,0 +1,7 @@
+{
+	"name": "react-wp-ssr",
+	"version": "0.0.1",
+	"peerDependencies": {
+		"react-dom": "^16.0.0"
+	}
+}
