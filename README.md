@@ -12,8 +12,8 @@ react-wp-ssr works best when used with [react-wp-scripts](https://github.com/hum
 
 For local development, we recommend the [v8js extension for Chassis](https://github.com/Chassis/v8js).
 
-## Quick Start
 
+## Quick Start
 
 1. Add this repository to your project.
 2. Add `react-wp-ssr` to your node modules: `npm install --save react-wp-ssr`
@@ -50,8 +50,14 @@ By default, react-wp-ssr does not render on the server during development (i.e. 
 
 When you do want to test, there are two constants you can use to control react-wp-ssr:
 
-* `SSR_DEBUG_ENABLE` (boolean, default `false`) - Define as `true` to override the development checks.
-* `SSR_DEBUG_SERVER_ONLY` (boolean, default `false`) - Define as `true` to only render on the server and skip loading the script. Useful to check the server is correctly rendering.
+```php
+// Define as `true` to render on the server, even during development.
+define( 'SSR_DEBUG_ENABLE', false );
+
+// Define as `true` to only render on the server and skip loading the script.
+// Useful to check the server is correctly rendering.
+define( 'SSR_DEBUG_SERVER_ONLY', false );
+```
 
 
 ## Detecting the Environment
