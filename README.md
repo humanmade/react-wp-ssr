@@ -8,10 +8,12 @@ Server-side rendering for React-based WordPress plugins and themes.
 * PHP 7.0+
 * [v8js Extension for PHP](https://github.com/phpv8/v8js)
 
+react-wp-ssr works best when used with [react-wp-scripts](https://github.com/humanmade/react-wp-scripts/) to handle the various build processes.
+
+For local development, we recommend the [v8js extension for Chassis](https://github.com/Chassis/v8js).
 
 ## Quick Start
 
-We highly recommend using [react-wp-scripts](https://github.com/humanmade/react-wp-scripts/) to handle the various build processes.
 
 1. Add this repository to your project.
 2. Add `react-wp-ssr` to your node modules: `npm install --save react-wp-ssr`
