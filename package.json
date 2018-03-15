@@ -5,6 +5,18 @@
 		"react-dom": "^16.0.0"
 	},
 	"files": [
-		"index.js"
-	]
+		"bundle.js"
+	],
+	"main": "bundle.js",
+	"devDependencies": {
+		"babel-cli": "^6.26.0",
+		"babel-preset-env": "^1.6.1"
+	},
+	"scripts": {
+		"build": "babel index.js -o bundle.js",
+		"prepare": "npm run build"
+	},
+	"babel": {
+		"presets": ["env"]
+	}
 }
