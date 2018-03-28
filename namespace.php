@@ -93,6 +93,14 @@ function render( $directory, $options = [] ) {
 		return;
 	}
 
+	// Check for v8js
+	if ( ! class_exists( 'V8Js' ) ) {
+		trigger_error( 'react-wp-ssr requires the v8js extension, skipping server-side rendering.', E_NOTICE );
+
+		printf( '<div id="%s"></div>', esc_attr( $options['container'] ) );
+		return;
+	}
+
 	$manifest_path = $directory . DIRECTORY_SEPARATOR . 'build' . DIRECTORY_SEPARATOR . 'asset-manifest.json';
 	$manifest = json_decode( file_get_contents( $manifest_path ), true );
 
