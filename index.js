@@ -6,7 +6,12 @@ export const ENV_SERVER = 'server';
 
 // Store current script reference in case we need it later, as currentScript
 // is only available on the first (synchronous) run.
-const renderedScript = document && document.currentScript;
+let renderedScript = false;
+try {
+	renderedScript = document && document.currentScript;
+} catch ( err ) {
+	// No-op; not defined in Node.
+}
 
 export function getEnvironment() {
 	return typeof global.isSSR === 'undefined' ? ENV_BROWSER : ENV_SERVER;
