@@ -136,10 +136,10 @@ END;
 	 * Filter functions available to the server-side rendering.
 	 *
 	 * @param array $functions Map of function name => callback. Exposed on the global `PHP` object.
-	 * @param string $directory Root directory used for rendering.
+	 * @param string $handle Script being rendered.
 	 * @param array $options Options passed to render.
 	 */
-	$functions = apply_filters( 'reactwpssr.functions', [], $directory, $options );
+	$functions = apply_filters( 'reactwpssr.functions', [], $handle, $options );
 	foreach ( $functions as $name => $function ) {
 		$v8->$name = $function;
 	}
