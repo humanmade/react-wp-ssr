@@ -117,6 +117,7 @@ var console = {
 	error: print,
 	log: ( print => it => print( JSON.stringify( it ) ) )( print )
 };
+window.setTimeout = window.clearTimeout = () => {};
 
 // Expose more globals we might want.
 var global = global || this,
