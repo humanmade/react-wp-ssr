@@ -95,7 +95,7 @@ function render( $directory, $options = [] ) {
 
 	// Check for v8js
 	if ( ! class_exists( 'V8Js' ) ) {
-		trigger_error( 'react-wp-ssr requires the v8js extension, skipping server-side rendering.', E_NOTICE );
+		trigger_error( 'react-wp-ssr requires the v8js extension, skipping server-side rendering.', E_USER_NOTICE );
 
 		printf( '<div id="%s"></div>', esc_attr( $options['container'] ) );
 		return;
