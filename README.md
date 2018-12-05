@@ -1,4 +1,19 @@
-# react-wp-ssr
+<table width="100%">
+	<tr>
+		<td align="left">
+			<strong>react-wp-ssr</strong><br />
+			Server-side rendering for React-based WordPress plugins and themes.
+		</td>
+		<td align="center" rowspan="2">
+			<img src="https://hmn.md/content/themes/hmnmd/assets/images/hm-logo.svg" width="100" />
+		</td>
+	</tr>
+	<tr>
+		<td>
+			A <strong><a href="https://hmn.md/">Human Made</a></strong> project. Maintained by @rmccue.
+		</td>
+	</tr>
+</table>
 
 Server-side rendering for React-based WordPress plugins and themes.
 
