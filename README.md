@@ -42,6 +42,6 @@ For local development, we recommend the [v8js extension for Chassis](https://git
 
 Created by Human Made for complex React-powered sites. We power our [Engineering Handbook](https://engineering.hmn.md/) with react-wp-ssr.
 
-Written and maintained by Ryan McCue. Thanks to all our contributors.
+Written and maintained by Ryan McCue. Licensed under the [ISC license](LICENSE). Thanks to all our contributors.
 
 Interested in working on projects using react-wp-ssr? [We're hiring!](https://humanmade.com/hiring/)
