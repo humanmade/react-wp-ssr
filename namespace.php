@@ -28,7 +28,6 @@ function get_window_object() {
 	$port = $port !== '80' && $port !== '443' ? (int) $port : '';
 	$query = $_SERVER['QUERY_STRING'];
 	return [
-		'document' => null,
 		'location' => [
 			'hash'     => '',
 			'host'     => $port ? $_SERVER['HTTP_HOST'] . ':' . $port : $_SERVER['HTTP_HOST'],
